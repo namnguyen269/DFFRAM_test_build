@@ -3,6 +3,7 @@
     "DESIGN_IS_CORE": 1,
     "ROUTING_CORES": 16,
     "VERILOG_FILES": [
+	"dir::../../verilog/rtl/defines.v",
 	"dir::../../verilog/rtl/DFFRAM.v",
 	"dir::../../verilog/rtl/DFFRAMBB.v"
     ],
