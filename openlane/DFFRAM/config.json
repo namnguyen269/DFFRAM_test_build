@@ -1,0 +1,75 @@
+{
+    "DESIGN_NAME": "DFFRAM",
+    "DESIGN_IS_CORE": 1,
+    "ROUTING_CORES": 16,
+    "VERILOG_FILES": [
+	"dir::../../verilog/rtl/DFFRAM.v",
+	"dir::../../verilog/rtl/DFFRAMBB.v"
+    ],
+    "CLOCK_PERIOD": 25,
+    "CLOCK_PORT": "CLK",    
+    "CLOCK_NET": "CLK",
+    "RUN_CTS": 0,
+
+    "FP_SIZING": "absolute",
+    "DIE_AREA": "0 0 750 525",
+
+    "SYNTH_USE_PG_PINS_DEFINES": "USE_POWER_PINS",
+    "GRT_ADJUSTMENT" :0.05,
+    "GLB_RT_MAXLAYER":5,
+    "PL_RESIZER_TIMING_OPTIMIZATIONS": 0,
+    "PL_RESIZER_DESIGN_OPTIMIZATIONS": 0,
+     
+    "PL_TARGET_DENSITY": 0.86,
+    
+    "SYNTH_READ_BLACKBOX_LIB":"1",
+
+    "MAX_TRANSITION_CONSTRAINT": 1.0,
+    "MAX_FANOUT_CONSTRAINT": 16,
+    "PL_RESIZER_SETUP_SLACK_MARGIN": 0.4,
+    "GLB_RESIZER_SETUP_SLACK_MARGIN": 0.2,
+    "GLB_RESIZER_HOLD_SLACK_MARGIN": 0.2,
+    "PL_RESIZER_HOLD_SLACK_MARGIN": 0.4,
+    "MAGIC_DEF_LABELS": 0,
+    "SYNTH_BUFFERING": 1,
+    "RUN_LINTER": 0,
+    "RUN_HEURISTIC_DIODE_INSERTION": 1,
+    "PL_ROUTABILITY_DRIVEN": 1,
+    "VDD_NETS": [
+        "vccd1"
+    ],
+    "GND_NETS": [
+        "vssd1"
+    ],
+    "IO_SYNC": 0,
+    "BASE_SDC_FILE": "dir::base_DFFRAM.sdc",
+    "RUN_CVC": 1,
+    "pdk::sky130*": {
+        "FP_CORE_UTIL": 20,
+        "RT_MAX_LAYER": "met3",
+        "scl::sky130_fd_sc_hd": {
+            "CLOCK_PERIOD": 16.5
+        },
+        "scl::sky130_fd_sc_hdll": {
+            "CLOCK_PERIOD": 10
+        },
+        "scl::sky130_fd_sc_hs": {
+            "CLOCK_PERIOD": 8
+        },
+        "scl::sky130_fd_sc_ls": {
+            "CLOCK_PERIOD": 10,
+            "SYNTH_MAX_FANOUT": 5
+        },
+        "scl::sky130_fd_sc_ms": {
+            "CLOCK_PERIOD": 10
+        }
+    },
+    "pdk::gf180mcuC": {
+        "STD_CELL_LIBRARY": "gf180mcu_fd_sc_mcu7t5v0",
+        "CLOCK_PERIOD": 24.0,
+        "FP_CORE_UTIL": 40,
+        "RT_MAX_LAYER": "Metal4",
+        "SYNTH_MAX_FANOUT": 4,
+        "PL_TARGET_DENSITY": 0.45
+    }
+}
